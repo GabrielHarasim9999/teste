@@ -1,0 +1,75 @@
+<!DOCTYPE html> <!-- Declara que este documento segue o padrão HTML5 -->
+<html lang="pt-BR"> <!-- Define que o idioma principal do documento é o português do Brasil -->
+<head>
+    <meta charset="UTF-8"> <!-- Define a codificação do documento para suportar caracteres especiais como acentos -->
+    <title>Exemplos de Formulários HTML</title> <!-- Define o título da aba do navegador -->
+</head>
+<body>
+    
+    <h1>Exemplos de Formulários HTML</h1> <!-- Título principal da página -->
+    
+    <!-- Exemplo 1: Formulário de Cadastro -->
+    <h2>1. Formulário de Cadastro</h2>
+    <form action="processa_cadastro.php" method="post"> <!-- Início do formulário, com envio dos dados via POST para processa_cadastro.php -->
+        <label for="nome">Nome:</label> <!-- Rótulo associado ao campo de nome -->
+        <input type="text" id="nome" name="nome" required> <!-- Campo de entrada de texto obrigatório para nome -->
+        <br><br>
+        <label for="email">E-mail:</label> <!-- Rótulo associado ao campo de e-mail -->
+        <input type="email" id="email" name="email" required> <!-- Campo de entrada específico para e-mail com validação automática -->
+        <br><br>
+        <label for="senha">Senha:</label> <!-- Rótulo associado ao campo de senha -->
+        <input type="password" id="senha" name="senha" required> <!-- Campo de entrada para senha, os caracteres são ocultos -->
+        <br><br>
+        <label for="nascimento">Data de Nascimento:</label> <!-- Rótulo para o campo de data de nascimento -->
+        <input type="date" id="nascimento" name="nascimento"> <!-- Campo para seleção de data -->
+        <br><br>
+        <button type="submit">Cadastrar</button> <!-- Botão de envio do formulário -->
+    </form>
+    
+    <!-- Exemplo 2: Formulário de Pesquisa -->
+    <h2>2. Formulário de Pesquisa</h2>
+    <form action="processa_pesquisa.php" method="post"> <!-- Formulário que envia os dados para processa_pesquisa.php -->
+        <label for="idade">Idade:</label> <!-- Rótulo associado ao campo de idade -->
+        <input type="number" id="idade" name="idade" required> <!-- Campo numérico para inserir idade -->
+        <br><br>
+        <p>Gênero:</p>
+        <input type="radio" id="masculino" name="genero" value="masculino"> <!-- Botão de seleção para gênero masculino -->
+        <label for="masculino">Masculino</label>
+        <input type="radio" id="feminino" name="genero" value="feminino"> <!-- Botão de seleção para gênero feminino -->
+        <label for="feminino">Feminino</label>
+        <br><br>
+        <button type="submit">Enviar</button> <!-- Botão de envio do formulário -->
+    </form>
+    
+    <!-- Exemplo 3: Formulário de Login -->
+    <h2>3. Formulário de Login</h2>
+    <form action="verifica_login.php" method="post"> <!-- Formulário que envia os dados para verificação de login -->
+        <label for="usuario">Usuário:</label> <!-- Rótulo para o campo de usuário -->
+        <input type="text" id="usuario" name="usuario" required> <!-- Campo de entrada para nome de usuário -->
+        <br><br>
+        <label for="senha">Senha:</label> <!-- Rótulo para o campo de senha -->
+        <input type="password" id="senha" name="senha" required pattern=".{6,}" title="Mínimo 6 caracteres"> <!-- Campo de entrada de senha com validação mínima de 6 caracteres -->
+        <br><br>
+        <button type="submit">Entrar</button> <!-- Botão de envio do formulário -->
+    </form>
+    
+    <!-- Exemplo 4: Formulário de Upload de Arquivos -->
+    <h2>4. Formulário de Upload de Arquivos</h2>
+    <form action="upload_arquivo.php" method="post" enctype="multipart/form-data"> <!-- Formulário que permite envio de arquivos -->
+        <label for="arquivo">Selecione um arquivo:</label> <!-- Rótulo para o campo de seleção de arquivo -->
+        <input type="file" id="arquivo" name="arquivo" accept=".jpg, .png, .pdf" required> <!-- Campo de seleção de arquivo com restrição de formatos -->
+        <br><br>
+        <button type="submit">Enviar</button> <!-- Botão para enviar o arquivo -->
+    </form>
+    
+    <!-- Exemplo 5: Formulário de Contato -->
+    <h2>5. Formulário de Contato</h2>
+    <form action="envia_mensagem.php" method="post"> <!-- Formulário que envia mensagem para o servidor -->
+        <label for="mensagem">Mensagem:</label> <!-- Rótulo para o campo de mensagem -->
+        <textarea id="mensagem" name="mensagem" rows="4" cols="30" required></textarea> <!-- Campo de texto para mensagem com tamanho definido -->
+        <br><br>
+        <button type="submit">Enviar</button> <!-- Botão de envio do formulário -->
+    </form>
+    
+</body>
+</html>
